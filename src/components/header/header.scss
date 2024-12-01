@@ -1,0 +1,535 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 29;
+  box-shadow: 0 5px 20px 0 rgba(44, 41, 51, 0.1);
+}
+
+.header__top > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.avisome {
+  color: rgb(92, 73, 215);
+  font-size: 18px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 55%;
+  .form {
+    width: 100%;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+
+    input {
+      width: 94%;
+      border: none;
+      outline: none;
+      color: rgb(116, 117, 136);
+    }
+  }
+}
+
+.headerMiddle {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  .location,
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 125%;
+      color: #121212;
+    }
+  }
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+// Border
+
+.header__border {
+  border: 1px solid rgb(223, 223, 223);
+}
+// Border
+
+// bottom
+
+.header__bottom > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.headerBottom__left {
+  .button_catagory {
+    gap: 8px;
+    border-radius: 8px;
+    width: 137px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(89, 70, 215);
+    color: #fff;
+    transition: 0.4s;
+    &:hover {
+      color: rgb(89, 70, 215);
+      background-color: transparent;
+      box-shadow: 0 0 5px rgb(89, 70, 215);
+    }
+  }
+}
+.headerBottom__middle {
+  .ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .li {
+      button {
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 125%;
+        color: #121212;
+        border: none;
+        position: relative; /* Hover effektining tagidan chiziq chiqarilishi uchun kerak */
+        transition: none; /* Tugma rangi o'zgarishini o'chirish */
+      }
+
+      /* Hover holati */
+      button::after {
+        content: "";
+        position: absolute;
+        bottom: -2px; /* Tugma tagidan 2px pastga siljitish */
+        left: 0;
+        width: 0%; /* Boshlang'ichda chiziq ko'rsatilmasligi */
+        height: 1px; /* Chiziq balandligi */
+        background-color: #121212; /* Chiziq rangini belgilash */
+        transition: width 0.3s ease; /* Chiziq kengligining o'zgarishi uchun transition qo'shish */
+      }
+
+      /* Hover holatida chiziqni ko'rsatish */
+      button:hover::after {
+        width: 100%; /* Chiziq kengligi 100% bo'ladi */
+      }
+    }
+  }
+}
+
+.headerBottom__right {
+  button {
+    gap: 15px;
+    border-radius: 8px;
+    width: 127px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(244, 245, 246);
+    transition: 0.5s;
+    &:hover {
+      color: #fff;
+      background-color: rgb(89, 70, 215);
+    }
+  }
+}
+
+@media (max-width: 1269px) {
+  .headerMiddle {
+    gap: 40px;
+
+    .location,
+    .user {
+      gap: 5px;
+      a {
+        font-weight: 400;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .headerBottom__middle {
+    .ul {
+      .li__akumlator {
+        display: none;
+      }
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1121px) {
+  .headerBottom__left {
+    .button_catagory {
+      width: 117px;
+      height: 40px;
+      font-size: 11px;
+    }
+  }
+
+  .headerBottom__right {
+    button {
+      gap: 10px;
+      width: 107px;
+      height: 40px;
+      font-size: 11px;
+    }
+  }
+
+  .headerLeft {
+    gap: 20px;
+    img {
+      width: 140px;
+    }
+    .form {
+      input {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .avisome {
+    font-size: 14px;
+  }
+
+  .headerMiddle {
+    gap: 30px;
+
+    .location,
+    .user {
+      gap: 8px;
+      a {
+        font-weight: 400;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .headerBottom__middle {
+    .ul {
+      .li__Лампочки {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 954px) {
+  .headerBottom__left {
+    .button_catagory {
+      width: 107px;
+      height: 36px;
+      font-size: 10px;
+    }
+  }
+
+  .headerBottom__right {
+    button {
+      gap: 10px;
+      width: 97px;
+      height: 36px;
+      font-size: 10px;
+    }
+  }
+
+  .headerLeft {
+    gap: 15px;
+    img {
+      width: 140px;
+    }
+    .form {
+      input {
+        font-size: 9px;
+      }
+    }
+  }
+
+  .avisome {
+    font-size: 14px;
+  }
+
+  .headerMiddle {
+    gap: 20px;
+
+    .location,
+    .user {
+      gap: 6px;
+      a {
+        font-size: 9px;
+      }
+    }
+  }
+
+  .headerRight {
+    gap: 20px;
+  }
+  .headerBottom__middle {
+    .ul {
+      .li__avtomasala {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .headerMiddle {
+    gap: 30px;
+
+    .location,
+    .user {
+      a {
+        display: none;
+      }
+    }
+  }
+
+  .headerRight {
+    gap: 30px;
+  }
+
+  .headerLeft {
+    gap: 35px;
+    width: 80%;
+    img {
+      width: 140px;
+    }
+    .form {
+      input {
+        font-size: 9px;
+      }
+    }
+  }
+
+  .avisome {
+    font-size: 16px;
+  }
+
+  .headerBottom__middle {
+    gap: 50px;
+    .ul {
+      .li__запчасти {
+        display: none;
+      }
+    }
+  }
+}
+
+// nav toppp
+
+.nav__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  img {
+    width: 160px;
+  }
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avisome__nav {
+  font-size: 18px;
+  color: rgb(107, 89, 204);
+}
+
+.avisome__bars {
+  font-size: 22px;
+  color: rgb(107, 89, 204);
+}
+
+// NAv bottom
+
+.nav__bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(107, 89, 204);
+    color: #fff;
+    height: 36px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+}
+
+.form_nav {
+  width: 100%;
+  border: 1px solid gray;
+  height: 36px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  input {
+    font-size: 12px;
+
+    width: 95%;
+    outline: none;
+    border: none;
+  }
+}
+
+.nav__border {
+  border: 1px solid rgb(223, 223, 223);
+}
+
+.nav2__bottom,
+.nav__border,
+.nav2 {
+  display: none;
+}
+
+.header__top,
+.header__border,
+.header__bottom {
+  display: block;
+}
+
+@media (max-width: 556px) {
+  .header__top,
+  .header__border,
+  .header__bottom {
+    display: none;
+  }
+
+  .nav2__bottom,
+  .nav__border,
+  .nav2 {
+    display: block;
+  }
+}
+
+@media (max-width: 423px) {
+  // nav toppp
+
+  .nav__top {
+    gap: 5px;
+  }
+
+  .nav__logo {
+    gap: 15px;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  // NAv bottom
+
+  .nav__bottom {
+    button {
+      width: 80px;
+      font-size: 20px;
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .form_nav {
+    input {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 423px) {
+  .location {
+    gap: 15px;
+  }
+
+  .avisome__nav {
+    font-size: 14px;
+  }
+
+  .avisome__bars {
+    font-size: 18px;
+  }
+
+  // nav toppp
+
+  .nav__top {
+    gap: 5px;
+  }
+
+  .nav__logo {
+    gap: 15px;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  // NAv bottom
+
+  .nav__bottom {
+    button {
+      width: 60px;
+      height: 30px;
+      font-size: 16px;
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .form_nav {
+    height: 30px;
+    input {
+      font-size: 9px;
+    }
+  }
+}

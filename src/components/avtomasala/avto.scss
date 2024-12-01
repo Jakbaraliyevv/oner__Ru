@@ -1,0 +1,997 @@
+.avto__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    font-size: 28px;
+    font-weight: 900;
+    color: rgb(37, 39, 41);
+  }
+
+  button {
+    gap: 20px;
+    width: 177px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(89, 70, 215);
+    background-color: rgb(236, 236, 244);
+    transition: 0.4s;
+    &:hover {
+      border: none;
+      color: #fff;
+      background-color: rgb(89, 70, 215);
+    }
+  }
+}
+
+.avto__bottom {
+  margin-top: 40px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.card1 {
+  width: 300px !important;
+  height: 430px;
+  display: flex;
+  padding: 30px;
+  position: relative;
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: rgb(89, 70, 215);
+  margin-top: 40px;
+
+  .card1__text {
+    h4 {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .card1__img {
+    bottom: 0;
+    position: absolute;
+    img {
+      width: 80%;
+    }
+  }
+}
+
+//  card 2 hammasi ketti
+
+.yulduz {
+  color: rgb(255, 148, 49);
+}
+
+.yulduz1 {
+  color: #dedee2;
+}
+
+.card2 {
+  gap: 20px;
+  width: 300px;
+  height: 430px;
+  padding: 10px;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #dedee2;
+  margin-top: 40px;
+
+  .card2__img {
+    img {
+      width: 100%;
+    }
+  }
+  .card2__text {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    .all__stars {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > p {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgb(202, 201, 205);
+        span {
+          color: rgb(121, 123, 125);
+        }
+      }
+      .stars {
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        .star {
+          gap: 3px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 900;
+      color: #121212;
+    }
+    .prices {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        gap: 15px;
+        display: flex;
+        align-items: start;
+        h1 {
+          font-size: 36px;
+          font-weight: 900;
+          color: #121212;
+        }
+        s {
+          font-size: 18px;
+          color: rgb(158, 155, 155);
+        }
+      }
+
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        color: rgb(89, 70, 215);
+        background-color: transparent;
+        border: 2px solid rgb(89, 70, 215);
+        transition: 0.6s;
+        &:hover {
+          background-color: rgb(107, 89, 204);
+          color: #fff;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+// Sariq cardlar
+
+.sarq__all {
+  gap: 10px;
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sariq {
+  position: relative;
+  img {
+    border-radius: 15px;
+    width: 100%;
+  }
+}
+
+.sarq__text {
+  top: 40px;
+  left: 40px;
+  width: 50%;
+  position: absolute;
+
+  h3 {
+    color: #121212;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 133%;
+    padding-bottom: 20px;
+  }
+
+  button {
+    gap: 10px;
+    width: 129px;
+    display: flex;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px 8px 20px;
+    background: rgb(89, 70, 215);
+    transition: 0.4s;
+    &:hover {
+      color: rgb(89, 70, 215);
+      background-color: transparent;
+      box-shadow: 0 0 5px rgb(89, 70, 215);
+    }
+  }
+}
+
+@media (max-width: 1312px) {
+  .yulduz {
+    font-size: 12px;
+  }
+
+  .yulduz1 {
+    font-size: 12px;
+    color: #dedee2;
+  }
+  .card1 {
+    width: 250px;
+    height: 400px;
+
+    .card1__text {
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .card1__img {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .card2 {
+    gap: 20px;
+    width: 250px;
+    height: 400px;
+    padding: 10px;
+
+    .card2__text {
+      gap: 15px;
+      .all__stars {
+        > p {
+          font-size: 12px;
+        }
+        .stars {
+          gap: 5px;
+          .star {
+            gap: 3px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 13px;
+      }
+      .prices {
+        .price {
+          gap: 5px;
+          h1 {
+            font-size: 26px;
+          }
+          s {
+            font-size: 13px;
+            color: rgb(158, 155, 155);
+          }
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+// sariq
+@media (max-width: 1152px) {
+  .sariq {
+    position: relative;
+    img {
+      border-radius: 15px;
+      width: 100%;
+    }
+  }
+
+  .sarq__text {
+    top: 40px;
+    left: 40px;
+    width: 50%;
+    position: absolute;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      gap: 8px;
+      width: 100px;
+      height: 35px;
+      font-size: 13px;
+      border-radius: 6px;
+    }
+  }
+}
+
+// sariq
+
+@media (max-width: 1098px) {
+  .sarq__all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .sarq__text {
+    top: 40px;
+    left: 40px;
+    width: 50%;
+    position: absolute;
+
+    h3 {
+      color: #121212;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 133%;
+      padding-bottom: 20px;
+    }
+
+    button {
+      gap: 10px;
+      width: 129px;
+      display: flex;
+      height: 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px 8px 20px;
+      background: rgb(89, 70, 215);
+      transition: 0.4s;
+      &:hover {
+        color: rgb(89, 70, 215);
+        background-color: transparent;
+        box-shadow: 0 0 5px rgb(89, 70, 215);
+      }
+    }
+  }
+
+  .avto__bottom {
+    flex-wrap: wrap;
+  }
+  .card1 {
+    width: 350px !important ;
+    height: 400px;
+    .card1__text {
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .card1__img {
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+  .card2 {
+    gap: 20px;
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+
+    .card2__text {
+      gap: 15px;
+      .all__stars {
+        > p {
+          font-size: 12px;
+        }
+        .stars {
+          gap: 5px;
+          .star {
+            gap: 3px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 13px;
+      }
+      .prices {
+        .price {
+          gap: 5px;
+          h1 {
+            font-size: 26px;
+          }
+          s {
+            font-size: 13px;
+          }
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+// sariq
+
+// @media (max-width: 785px) {
+//   .sariq {
+//     position: relative;
+//     img {
+//       border-radius: 15px;
+//       width: 100%;
+//     }
+//   }
+
+//   .sarq__text {
+//     top: 40px;
+//     left: 40px;
+//     width: 50%;
+//     position: absolute;
+
+//     h3 {
+//       font-size: 20px;
+//     }
+
+//     button {
+//       gap: 8px;
+//       width: 100px;
+//       height: 35px;
+//       font-size: 13px;
+//       border-radius: 6px;
+//     }
+//   }
+// }
+
+// sariq1
+
+@media (max-width: 784px) {
+  .sarq__text {
+    top: 40px;
+    left: 40px;
+    width: 50%;
+    position: absolute;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      gap: 8px;
+      width: 100px;
+      height: 35px;
+      font-size: 13px;
+      border-radius: 6px;
+    }
+  }
+
+  .avto__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .yulduz {
+    font-size: 12px;
+  }
+
+  .yulduz1 {
+    font-size: 12px;
+  }
+  .card1 {
+    width: 100% !important;
+    height: 400px;
+    padding: 30px;
+    .card1__text {
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .card1__img {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .card2 {
+    gap: 20px;
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    .card2__text {
+      gap: 15px;
+      .all__stars {
+        > p {
+          font-size: 12px;
+        }
+        .stars {
+          gap: 5px;
+          .star {
+            gap: 3px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 13px;
+      }
+      .prices {
+        .price {
+          gap: 5px;
+          h1 {
+            font-size: 26px;
+          }
+          s {
+            font-size: 13px;
+          }
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .sarq__text {
+    top: 30px;
+    left: 30px;
+    width: 50%;
+
+    h3 {
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+
+    button {
+      gap: 8px;
+      width: 80px;
+      height: 30px;
+      font-size: 11px;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 654px) {
+  .avto__top {
+    h1 {
+      font-size: 25px;
+    }
+
+    button {
+      gap: 15px;
+      width: 157px;
+      height: 30px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+  }
+
+  .avto__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .yulduz {
+    font-size: 12px;
+  }
+
+  .yulduz1 {
+    font-size: 12px;
+  }
+  .card1 {
+    // width: 250px !important;
+    height: 400px;
+    padding: 30px;
+    margin-top: 30px;
+
+    .card1__text {
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .card1__img {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .card2 {
+    gap: 20px;
+    // width: 250px;
+    height: 400px;
+    padding: 10px;
+    margin-top: 30px;
+
+    .card2__text {
+      gap: 15px;
+      .all__stars {
+        > p {
+          font-size: 12px;
+        }
+        .stars {
+          gap: 5px;
+          .star {
+            gap: 3px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 13px;
+      }
+      .prices {
+        .price {
+          gap: 5px;
+          h1 {
+            font-size: 26px;
+          }
+          s {
+            font-size: 13px;
+          }
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .avto__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .yulduz {
+    font-size: 12px;
+  }
+
+  .yulduz1 {
+    font-size: 12px;
+  }
+  .card1 {
+    // width: 200px !important;
+    height: 340px;
+    padding: 30px;
+    margin-top: 20px;
+
+    .card1__text {
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .card1__img {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .card2 {
+    gap: 20px;
+    // width: 200px;
+    height: 340px;
+    padding: 10px;
+    margin-top: 20px;
+
+    .card2__text {
+      gap: 10px;
+      .all__stars {
+        > p {
+          font-size: 10px;
+        }
+        .stars {
+          gap: 3px;
+          .star {
+            gap: 1px;
+          }
+
+          p {
+            font-size: 10px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 11px;
+      }
+      .prices {
+        .price {
+          gap: 3px;
+          h1 {
+            font-size: 20px;
+          }
+          s {
+            font-size: 11px;
+          }
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .sarq__text {
+    top: 20px;
+    left: 20px;
+    width: 50%;
+
+    h3 {
+      font-size: 14px;
+      padding-bottom: 8px;
+    }
+
+    button {
+      gap: 8px;
+      width: 70px;
+      height: 25px;
+      font-size: 10px;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .sarq__all {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+  .sarq__text {
+    top: 40px;
+    left: 40px;
+    width: 50%;
+    position: absolute;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      gap: 8px;
+      width: 100px;
+      height: 35px;
+      font-size: 13px;
+      border-radius: 6px;
+    }
+  }
+
+  .avto__top {
+    h1 {
+      font-size: 20px !important;
+    }
+
+    button {
+      gap: 10px !important;
+      width: 117px !important;
+      height: 30px;
+      font-size: 11px !important;
+      border-radius: 6px;
+    }
+  }
+  .avto__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .yulduz {
+    font-size: 12px;
+  }
+
+  .yulduz1 {
+    font-size: 12px;
+  }
+  .card1 {
+    // width: 300px !important;
+    height: 350px !important;
+    padding: 30px;
+    margin-top: 20px;
+
+    .card1__text {
+      h4 {
+        font-size: 24px;
+      }
+    }
+    .card1__img {
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  .card2 {
+    gap: 20px;
+    // width: 300px;
+    height: 430px;
+    padding: 10px;
+    margin-top: 20px;
+
+    .card2__img {
+      img {
+        width: 100%;
+      }
+    }
+    .card2__text {
+      gap: 15px;
+      .all__stars {
+        > p {
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .stars {
+          gap: 5px;
+          .star {
+            gap: 3px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+      .prices {
+        .price {
+          gap: 15px;
+          h1 {
+            font-size: 36px;
+          }
+          s {
+            font-size: 18px;
+          }
+        }
+
+        button {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .sarq__text {
+    top: 20px;
+    left: 20px;
+    width: 50%;
+
+    h3 {
+      font-size: 14px;
+      padding-bottom: 8px;
+    }
+
+    button {
+      gap: 8px;
+      width: 70px;
+      height: 25px;
+      font-size: 10px;
+      border-radius: 4px;
+    }
+  }
+
+  .avto__top {
+    h1 {
+      font-size: 25px;
+    }
+
+    button {
+      gap: 15px;
+      width: 157px;
+      height: 30px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+  }
+
+  .yulduz {
+    font-size: 12px;
+  }
+
+  .yulduz1 {
+    font-size: 12px;
+  }
+  .card1 {
+    // width: 250px !important;
+    height: 400px;
+    padding: 30px;
+    margin-top: 10px;
+
+    .card1__text {
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .card1__img {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .card2 {
+    gap: 20px;
+    // width: 250px;
+    height: 400px;
+    padding: 10px;
+    margin-top: 10px;
+
+    .card2__text {
+      gap: 15px;
+      .all__stars {
+        > p {
+          font-size: 12px;
+        }
+        .stars {
+          gap: 5px;
+          .star {
+            gap: 3px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 13px;
+      }
+      .prices {
+        .price {
+          gap: 5px;
+          h1 {
+            font-size: 26px;
+          }
+          s {
+            font-size: 13px;
+          }
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
