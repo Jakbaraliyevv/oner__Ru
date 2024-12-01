@@ -463,10 +463,6 @@
 
   .nav__logo {
     gap: 15px;
-
-    img {
-      width: 150px;
-    }
   }
 
   // NAv bottom
@@ -494,11 +490,11 @@
   }
 
   .avisome__nav {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .avisome__bars {
-    font-size: 18px;
+    font-size: 21px;
   }
 
   // nav toppp
@@ -508,19 +504,15 @@
   }
 
   .nav__logo {
-    gap: 15px;
-
-    img {
-      width: 120px;
-    }
+    gap: 10px;
   }
 
   // NAv bottom
 
   .nav__bottom {
     button {
-      width: 60px;
-      height: 30px;
+      width: 80px;
+      height: 40px;
       font-size: 16px;
       p {
         display: none;
@@ -529,9 +521,9 @@
   }
 
   .form_nav {
-    height: 30px;
+    height: 40px;
     input {
-      font-size: 9px;
+      font-size: 10px;
     }
   }
 }
