@@ -1,6 +1,8 @@
 import React from "react";
 import "./header.scss";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faMagnifyingGlass,
   faLocationDot,
@@ -13,12 +15,18 @@ import {
 import logo from "../../img/logo.svg";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const clickBUtton = () => {
+    navigate("/korzina");
+  };
   return (
     <header className="header">
       <div className="header__top">
         <div className="container">
           <div className="headerLeft">
             <img src={logo} alt="" />
+
             <form className="form order2">
               <input
                 type="search"
@@ -85,7 +93,7 @@ function Header() {
             </ul>
           </div>
           <div className="headerBottom__right order1">
-            <button>
+            <button onClick={clickBUtton}>
               <FontAwesomeIcon icon={faCartShopping} />
               <p>Корзина</p>
               <span>5</span>

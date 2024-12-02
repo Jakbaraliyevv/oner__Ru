@@ -1,18 +1,22 @@
 import ".././avtomasala/avto.scss";
-import React from "react";
+import React, { useContext } from "react";
 import useAxios from "../../hooks/useAxios";
 // Iconlar
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import notificationApi from "../../generic/notification";
+import { ShopAppContext } from "../../context/shopContext";
 // Rasmlar
 
 function Chasto() {
   const { data, loading, error } = useAxios({ url: "recomended" });
 
   const recomended = data.find((item) => item.recomended)?.recomended || [];
+  //
+  const { dispatch } = useContext(ShopAppContext);
+  //
 
-  console.log(recomended);
-
+  const notify = notificationApi();
   return (
     <section className="avtomasala">
       <div className="container">
@@ -55,7 +59,12 @@ function Chasto() {
                       {value.price_old} <span>{value.currency}</span>{" "}
                     </s>
                   </div>
-                  <button>
+                  <button
+                    onClick={() => {
+                      dispatch({ type: "add", value });
+                      notify({ type: "add" });
+                    }}
+                  >
                     <FontAwesomeIcon icon={faCartShopping} />
                   </button>
                 </div>

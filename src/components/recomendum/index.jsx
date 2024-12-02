@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // import "./recomendum.scss";
 import ".././avtomasala/avto.scss";
 import useAxios from "../../hooks/useAxios";
@@ -6,15 +6,18 @@ import useAxios from "../../hooks/useAxios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import LoaderApi from "../../generic/loader";
+import { ShopAppContext } from "../../context/shopContext";
+import notificationApi from "../../generic/notification";
 // Rasmlar
 
 function Recomended() {
   const { data, loading, error } = useAxios({ url: "recomended" });
-
   const recomended = data.find((item) => item.recomended)?.recomended || [];
-
   const { cardProductLoader } = LoaderApi();
 
+  const { dispatch } = useContext(ShopAppContext);
+
+  const notify = notificationApi();
   return (
     <section className="avtomasala">
       <div className="container">
@@ -59,10 +62,15 @@ function Recomended() {
                         {value.price_current} <span>{value.currency}</span>{" "}
                       </h1>
                       <s>
-                        {value.price_old} <span>{value.currency}</span>{" "}
+                        {value.price_old} <span>{value.currency}</span>
                       </s>
                     </div>
-                    <button>
+                    <button
+                      onClick={() => {
+                        dispatch({ type: "add", value }),
+                          notify({ type: "add" });
+                      }}
+                    >
                       <FontAwesomeIcon icon={faCartShopping} />
                     </button>
                   </div>

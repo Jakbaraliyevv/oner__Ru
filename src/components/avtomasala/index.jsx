@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./avto.scss";
 import useAxios from "../../hooks/useAxios";
 // Iconlar
@@ -12,6 +12,8 @@ import {
 import img__card1 from "../../img/mobil.png";
 
 import bg__sarq from "../../img/sarqpng.png";
+import { ShopAppContext } from "../../context/shopContext";
+import notificationApi from "../../generic/notification";
 // import LoaderApi from "../../generic/loader";
 
 function Avtomasala() {
@@ -20,6 +22,9 @@ function Avtomasala() {
   // const { cardProductLoader } = LoaderApi();
 
   const avtomasala = data.find((item) => item.avtomasala)?.avtomasala || [];
+
+  const { dispatch } = useContext(ShopAppContext);
+  const notify = notificationApi();
 
   return (
     <section className="avtomasala">
@@ -68,7 +73,12 @@ function Avtomasala() {
                     <h1>{value.price}</h1>
                     <s>2 864 ₽</s>
                   </div>
-                  <button>
+                  <button
+                    onClick={() => {
+                      dispatch({ type: "add", value });
+                      notify({ type: "add" });
+                    }}
+                  >
                     <FontAwesomeIcon icon={faCartShopping} />
                   </button>
                 </div>
