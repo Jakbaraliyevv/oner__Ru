@@ -995,3 +995,17 @@
     }
   }
 }
+
+// loader
+
+// .loader {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+.loader {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}

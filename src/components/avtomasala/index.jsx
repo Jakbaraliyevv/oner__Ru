@@ -12,13 +12,15 @@ import {
 import img__card1 from "../../img/mobil.png";
 
 import bg__sarq from "../../img/sarqpng.png";
+// import LoaderApi from "../../generic/loader";
 
 function Avtomasala() {
   const { data, loading, error } = useAxios({ url: "avtomasala" });
 
+  // const { cardProductLoader } = LoaderApi();
+
   const avtomasala = data.find((item) => item.avtomasala)?.avtomasala || [];
 
-  console.log(avtomasala);
   return (
     <section className="avtomasala">
       <div className="container">
@@ -109,6 +111,10 @@ function Avtomasala() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="container">
+        {/* <div className="avtomasla">{cardProductLoader()}</div> */}
       </div>
     </section>
   );
