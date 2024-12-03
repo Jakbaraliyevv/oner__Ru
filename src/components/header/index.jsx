@@ -25,7 +25,7 @@ function Header() {
       <div className="header__top">
         <div className="container">
           <div className="headerLeft">
-            <img src={logo} alt="" />
+              <img src={logo} alt="" />
 
             <form className="form order2">
               <input

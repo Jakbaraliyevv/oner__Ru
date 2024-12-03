@@ -14,17 +14,17 @@ import img__card1 from "../../img/mobil.png";
 import bg__sarq from "../../img/sarqpng.png";
 import { ShopAppContext } from "../../context/shopContext";
 import notificationApi from "../../generic/notification";
-// import LoaderApi from "../../generic/loader";
+import LoaderApi from "../../generic/loader";
 
 function Avtomasala() {
   const { data, loading, error } = useAxios({ url: "avtomasala" });
-
-  // const { cardProductLoader } = LoaderApi();
 
   const avtomasala = data.find((item) => item.avtomasala)?.avtomasala || [];
 
   const { dispatch } = useContext(ShopAppContext);
   const notify = notificationApi();
+
+  const { cardProductLoader } = LoaderApi({ length: 3 });
 
   return (
     <section className="avtomasala">
@@ -46,45 +46,51 @@ function Avtomasala() {
             </div>
           </div>
 
-          {avtomasala.map((value) => (
-            <div key={value.id} className="card2">
-              <div className="card2__img">
-                <img src={value.image} alt="" />
-              </div>
-              <div className="card2__text">
-                <div className="all__stars">
-                  <p>{value.title}</p>
-                  <div className="stars">
-                    <div className="star">
-                      <FontAwesomeIcon icon={faStar} className="yulduz" />
-                      <FontAwesomeIcon icon={faStar} className="yulduz" />
-                      <FontAwesomeIcon icon={faStar} className="yulduz" />
-                      <FontAwesomeIcon icon={faStar} className="yulduz" />
-                      <FontAwesomeIcon icon={faStar} className="yulduz1" />
-                    </div>
-                    <p>4.0 (51)</p>
-                  </div>
-                </div>
-
-                <h2>{value.description}</h2>
-
-                <div className="prices">
-                  <div className="price">
-                    <h1>{value.price}</h1>
-                    <s>2 864 ₽</s>
-                  </div>
-                  <button
-                    onClick={() => {
-                      dispatch({ type: "add", value });
-                      notify({ type: "add" });
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faCartShopping} />
-                  </button>
-                </div>
-              </div>
+          {loading ? (
+            <div className="container">
+              <div className="loader">{cardProductLoader()}</div>
             </div>
-          ))}
+          ) : (
+            avtomasala.map((value) => (
+              <div key={value.id} className="card2">
+                <div className="card2__img">
+                  <img src={value.image} alt="" />
+                </div>
+                <div className="card2__text">
+                  <div className="all__stars">
+                    <p>{value.title}</p>
+                    <div className="stars">
+                      <div className="star">
+                        <FontAwesomeIcon icon={faStar} className="yulduz" />
+                        <FontAwesomeIcon icon={faStar} className="yulduz" />
+                        <FontAwesomeIcon icon={faStar} className="yulduz" />
+                        <FontAwesomeIcon icon={faStar} className="yulduz" />
+                        <FontAwesomeIcon icon={faStar} className="yulduz1" />
+                      </div>
+                      <p>4.0 (51)</p>
+                    </div>
+                  </div>
+
+                  <h2>{value.description}</h2>
+
+                  <div className="prices">
+                    <div className="price">
+                      <h1>{value.price}</h1>
+                      <s>2 864 ₽</s>
+                    </div>
+                    <button
+                      onClick={() => {
+                        dispatch({ type: "add", value });
+                        notify({ type: "add" });
+                      }}
+                    >
+                      <FontAwesomeIcon icon={faCartShopping} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
         </div>
 
         <div className="sarq__all">
