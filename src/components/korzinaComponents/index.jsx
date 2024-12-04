@@ -61,7 +61,7 @@ function KorzinaComponents() {
                     <div className="korzina__delete">
                       <div className="price">
                         <p>Price:</p>
-                        <h2>{value.userPrice}</h2>
+                        <h2>{`${value.userPrice}$`}</h2>
                       </div>
                       <button
                         onClick={() =>
