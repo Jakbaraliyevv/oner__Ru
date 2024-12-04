@@ -6,6 +6,7 @@ const notificationApi = () => {
         return notification.success({
           message: "Add card",
           className: "custom-notification", // CSS sinfi qo‘shildi
+          duration: 1,
         });
       default:
         return;
