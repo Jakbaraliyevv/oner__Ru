@@ -7,8 +7,6 @@ function Cards() {
 
   const catagory = data.find((item) => item.catagory)?.catagory || [];
 
-  console.log(catagory);
-
   return (
     <section className="cardlar">
       <div className="container">

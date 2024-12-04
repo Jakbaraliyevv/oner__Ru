@@ -54,11 +54,11 @@ function Avtomasala() {
             avtomasala.map((value) => (
               <div key={value.id} className="card2">
                 <div className="card2__img">
-                  <img src={value.image} alt="" />
+                  <img src={value.imagie} alt="" />
                 </div>
                 <div className="card2__text">
                   <div className="all__stars">
-                    <p>{value.title}</p>
+                    <p>{value.action}</p>
                     <div className="stars">
                       <div className="star">
                         <FontAwesomeIcon icon={faStar} className="yulduz" />
@@ -71,11 +71,11 @@ function Avtomasala() {
                     </div>
                   </div>
 
-                  <h2>{value.description}</h2>
+                  <h2>{value.name}</h2>
 
                   <div className="prices">
                     <div className="price">
-                      <h1>{value.price}</h1>
+                      <h1>{value.price_current}</h1>
                       <s>2 864 ₽</s>
                     </div>
                     <button

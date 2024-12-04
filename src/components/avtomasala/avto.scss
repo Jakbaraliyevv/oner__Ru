@@ -996,16 +996,6 @@
   }
 }
 
-// loader
-
-// .loader {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   gap: 20px;
-// }
-
 .loader {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

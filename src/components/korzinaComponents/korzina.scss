@@ -1,0 +1,147 @@
+.all > div {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+// ..all__price--card
+
+.all__price--card {
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 5px;
+}
+
+.korzina__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  .korzina__img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .korzina__text {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 60%;
+      h2 {
+        color: rgb(47, 48, 54);
+        font-size: 24px;
+      }
+      h4 {
+        font-size: 16px;
+        color: rgb(115, 116, 119);
+      }
+    }
+
+    img {
+      width: 30%;
+    }
+  }
+
+  //
+
+  .plus__minus {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 15%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    button {
+      width: 50%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      font-size: 22px;
+      color: #121212;
+    }
+  }
+
+  //   korzina__delete
+
+  .korzina__delete {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 20%;
+    .price {
+      display: flex;
+      gap: 15px;
+      p {
+        color: rgb(115, 116, 119);
+        font-size: 18px;
+      }
+      h2 {
+        color: rgb(47, 48, 54);
+        font-size: 24px;
+      }
+    }
+
+    button {
+      height: 30px;
+      width: 100%;
+      border-radius: 5px;
+      background-color: red;
+      color: #fff;
+      font-size: 16px;
+      transition: 0.4s;
+      &:hover {
+        background-color: rgb(182, 20, 20);
+      }
+    }
+  }
+}
+
+// korzina__total
+
+.korzina__total {
+  width: 28%;
+  border: 1px solid gray;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 5px;
+
+  h2 {
+    color: rgb(47, 48, 54);
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(13, 202, 13);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.4s;
+    &:hover {
+      background-color: rgb(23, 124, 23);
+    }
+  }
+
+  .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      color: #121212;
+      font-size: 18px;
+    }
+    p {
+      color: #121212;
+      font-size: 21px;
+    }
+  }
+}

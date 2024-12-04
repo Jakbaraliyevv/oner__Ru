@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./header.scss";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Badge } from "antd";
 
 import {
   faMagnifyingGlass,
@@ -13,6 +14,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../img/logo.svg";
+import { ShopAppContext } from "../../context/shopContext";
 
 function Header() {
   const navigate = useNavigate();
@@ -20,12 +22,16 @@ function Header() {
   const clickBUtton = () => {
     navigate("/korzina");
   };
+
+  const { state } = useContext(ShopAppContext);
+  console.log(state.data);
+
   return (
     <header className="header">
       <div className="header__top">
         <div className="container">
           <div className="headerLeft">
-              <img src={logo} alt="" />
+            <img src={logo} alt="" />
 
             <form className="form order2">
               <input
@@ -94,9 +100,15 @@ function Header() {
           </div>
           <div className="headerBottom__right order1">
             <button onClick={clickBUtton}>
-              <FontAwesomeIcon icon={faCartShopping} />
               <p>Корзина</p>
-              <span>5</span>
+              <div>
+                <Badge count={state.data.length}>
+                  <FontAwesomeIcon
+                    icon={faCartShopping}
+                    className="korzina__Shop"
+                  />
+                </Badge>
+              </div>
             </button>
           </div>
         </div>
@@ -111,7 +123,14 @@ function Header() {
             </div>
             <div className="location">
               <FontAwesomeIcon icon={faLocationDot} className="avisome__nav" />
-              <FontAwesomeIcon icon={faCartShopping} className="avisome__nav" />
+              <div>
+                <Badge count={state.data.length}>
+                  <FontAwesomeIcon
+                    icon={faCartShopping}
+                    className="korzina__Shop"
+                  />
+                </Badge>
+              </div>
               <FontAwesomeIcon icon={faUser} className="avisome__nav" />
             </div>
           </div>
