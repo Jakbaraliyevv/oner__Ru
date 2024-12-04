@@ -43,59 +43,67 @@
     }
 
     img {
-      width: 30%;
+      width: 40%;
     }
   }
 
   //
 
-  .plus__minus {
+  .hammasi {
     display: flex;
     align-items: center;
-    gap: 15px;
-    width: 15%;
-    border-radius: 5px;
-    border: 1px solid gray;
-    button {
-      width: 50%;
-      height: 100%;
-      background-color: transparent;
-      border: none;
-      font-size: 22px;
-      color: #121212;
-    }
-  }
-
-  //   korzina__delete
-
-  .korzina__delete {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 20%;
-    .price {
+    gap: 80px;
+    // justify-content: space-between;
+    .plus__minus {
       display: flex;
+      align-items: center;
       gap: 15px;
-      p {
-        color: rgb(115, 116, 119);
-        font-size: 18px;
-      }
-      h2 {
-        color: rgb(47, 48, 54);
-        font-size: 24px;
+      height: 35px;
+      width: 30%;
+      border-radius: 5px;
+      border: 1px solid gray;
+      button {
+        width: 50%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        font-size: 22px;
+        color: #121212;
+        padding: 0 4px;
       }
     }
 
-    button {
-      height: 30px;
+    //   korzina__delete
+
+    .korzina__delete {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
       width: 100%;
-      border-radius: 5px;
-      background-color: red;
-      color: #fff;
-      font-size: 16px;
-      transition: 0.4s;
-      &:hover {
-        background-color: rgb(182, 20, 20);
+      .price {
+        display: flex;
+        gap: 15px;
+        p {
+          color: rgb(115, 116, 119);
+          font-size: 18px;
+        }
+        h2 {
+          color: rgb(47, 48, 54);
+          font-size: 24px;
+        }
+      }
+
+      button {
+        height: 30px;
+        width: 100%;
+        border-radius: 5px;
+        background-color: red;
+        color: #fff;
+        font-size: 16px;
+        transition: 0.4s;
+        &:hover {
+          background-color: rgb(182, 20, 20);
+        }
       }
     }
   }
@@ -111,6 +119,7 @@
   flex-direction: column;
   gap: 40px;
   border-radius: 5px;
+  user-select: none;
 
   h2 {
     color: rgb(47, 48, 54);
@@ -142,6 +151,404 @@
     p {
       color: #121212;
       font-size: 21px;
+    }
+  }
+}
+
+// Korzina bombosh
+
+.bombomsh > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .bosh__img {
+    justify-content: center;
+    display: flex;
+    img {
+      width: 60%;
+    }
+  }
+
+  .bosh__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    h2 {
+      font-size: 20px;
+      color: #121212;
+    }
+    p {
+      font-size: 16px;
+      color: rgb(47, 48, 54);
+    }
+
+    button {
+      width: 20%;
+      height: 35px;
+      background-color: rgb(230, 232, 237);
+      font-size: 16px;
+      color: #121212;
+      border-radius: 5px;
+    }
+  }
+}
+
+// Korzina bombosh tugadi
+
+// Korzina  price responsive
+
+@media (max-width: 1060px) {
+  .all__price--card {
+    padding: 15px;
+  }
+
+  .korzina__price {
+    .korzina__img {
+      gap: 15px;
+      .korzina__text {
+        gap: 10px;
+        h2 {
+          font-size: 17px;
+        }
+        h4 {
+          font-size: 10px;
+        }
+      }
+
+      img {
+        width: 40%;
+      }
+    }
+    .hammasi {
+      gap: 80px;
+      .plus__minus {
+        height: 30px;
+        button {
+          font-size: 18px;
+        }
+        .span__price {
+          font-size: 14px;
+        }
+      }
+      .korzina__delete {
+        .price {
+          p {
+            font-size: 15px;
+          }
+          h2 {
+            font-size: 18px;
+          }
+        }
+        button {
+          height: 28px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .korzina__total {
+    h2 {
+      font-size: 20px;
+    }
+
+    button {
+      font-size: 14px;
+    }
+
+    .total {
+      h4 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .bombomsh > div {
+    .bosh__img {
+      img {
+        width: 50%;
+      }
+    }
+
+    .bosh__text {
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 13px;
+      }
+
+      button {
+        width: 22%;
+        height: 30px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .all > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .all__price--card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .korzina__price {
+    .korzina__img {
+      .korzina__text {
+        h2 {
+          font-size: 18px;
+        }
+        h4 {
+          font-size: 12px;
+        }
+      }
+
+      img {
+        width: 40%;
+      }
+    }
+
+    //
+
+    .hammasi {
+      gap: 80px;
+      .plus__minus {
+        gap: 15px;
+        height: 30px;
+        width: 30%;
+        button {
+          font-size: 18px;
+        }
+        .span__price {
+          font-size: 14px;
+        }
+      }
+
+      .korzina__delete {
+        .price {
+          p {
+            font-size: 15px;
+          }
+          h2 {
+            font-size: 18px;
+          }
+        }
+
+        button {
+          height: 28px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .korzina__total {
+    width: 50%;
+    h2 {
+      font-size: 20px;
+    }
+
+    button {
+      font-size: 14px;
+    }
+
+    .total {
+      h4 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .bombomsh > div {
+    .bosh__img {
+      img {
+        width: 40%;
+      }
+    }
+
+    .bosh__text {
+      h2 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 11px;
+      }
+
+      button {
+        width: 22%;
+        height: 26px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .korzina__price {
+    display: flex;
+    flex-wrap: wrap;
+    .korzina__img {
+      .korzina__text {
+        h2 {
+          font-size: 18px;
+        }
+        h4 {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .hammasi {
+      width: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: space-between !important;
+      .plus__minus {
+        height: 30px;
+        width: 50%;
+        button {
+          font-size: 18px;
+        }
+        .span__price {
+          font-size: 14px;
+        }
+      }
+      .korzina__delete {
+        .price {
+          p {
+            font-size: 15px;
+          }
+          h2 {
+            font-size: 18px;
+          }
+        }
+
+        button {
+          width: 60%;
+          height: 28px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .korzina__total {
+    h2 {
+      color: rgb(47, 48, 54);
+      font-size: 20px;
+    }
+
+    button {
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .bombomsh > div {
+    .bosh__img {
+      img {
+        width: 30%;
+      }
+    }
+
+    .bosh__text {
+      h2 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      button {
+        height: 26px;
+        font-size: 9px;
+      }
+    }
+  }
+
+  .korzina__price {
+    gap: 20px;
+    .korzina__img {
+      .korzina__text {
+        h2 {
+          font-size: 16px;
+        }
+        h4 {
+          font-size: 10px;
+        }
+      }
+    }
+
+    //
+
+    .hammasi {
+      .plus__minus {
+        height: 26px;
+        button {
+          font-size: 16px;
+        }
+        .span__price {
+          font-size: 12px;
+        }
+      }
+
+      //   korzina__delete
+
+      .korzina__delete {
+        .price {
+          p {
+            font-size: 13px;
+          }
+          h2 {
+            font-size: 14px;
+          }
+        }
+
+        button {
+          height: 26px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .korzina__total {
+    width: 70%;
+    padding: 15px;
+    h2 {
+      font-size: 16px;
+    }
+
+    button {
+      height: 25px;
+      font-size: 12px;
+    }
+
+    .total {
+      h4 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
   }
 }

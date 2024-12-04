@@ -1,5 +1,4 @@
 import { createContext, useReducer } from "react";
-import { data } from "react-router-dom";
 
 const ShopAppContext = createContext();
 
@@ -16,11 +15,18 @@ const ShopContext1 = ({ children }) => {
         if (findData) {
           state.data = state.data.map((value) =>
             findData.id === value.id
-              ? { ...findData, count: findData.count + 1 }
-              : findData
+              ? {
+                  ...findData,
+                  count: findData.count + 1,
+                  userPrice: value.count * value.price_current,
+                }
+              : value
           );
         } else {
-          state.data = [...state.data, { ...value, count: 1 }];
+          state.data = [
+            ...state.data,
+            { ...value, count: 1, userPrice: value.price_current },
+          ];
         }
 
         localStorage.setItem("shop", JSON.stringify(state.data));
@@ -28,14 +34,19 @@ const ShopContext1 = ({ children }) => {
 
       case "delete":
         const filterData = state.data.filter((value) => value.id !== delet_ID);
-        console.log(delet_ID);
         localStorage.setItem("shop", JSON.stringify(filterData));
 
         return { ...state, data: filterData };
 
       case "increment":
         state.data = state.data.map((item) =>
-          product__id === item.id ? { ...item, count: item.count + 1 } : item
+          product__id === item.id
+            ? {
+                ...item,
+                count: item.count + 1,
+                userPrice: (item.count + 1) * item.price_current,
+              }
+            : item
         );
         localStorage.setItem("shop", JSON.stringify(state.data));
         return { ...state };
@@ -43,7 +54,12 @@ const ShopContext1 = ({ children }) => {
       case "decrement":
         state.data = state.data.map((item) =>
           product__id === item.id
-            ? { ...item, count: item.count > 1 ? item.count - 1 : 1 }
+            ? {
+                ...item,
+                count: item.count > 1 ? item.count - 1 : 1,
+                userPrice:
+                  (item.count > 1 ? item.count - 1 : 1) * item.price_current,
+              }
             : item
         );
         localStorage.setItem("shop", JSON.stringify(state.data));
@@ -54,6 +70,8 @@ const ShopContext1 = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(reducer, intialState);
+
+  console.log(state.data);
 
   return (
     <ShopAppContext.Provider value={{ state, dispatch }}>

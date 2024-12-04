@@ -325,6 +325,12 @@
 // sariq
 
 @media (max-width: 1098px) {
+  .loader {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+  }
+
   .sarq__all {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -431,39 +437,6 @@
     }
   }
 }
-
-// sariq
-
-// @media (max-width: 785px) {
-//   .sariq {
-//     position: relative;
-//     img {
-//       border-radius: 15px;
-//       width: 100%;
-//     }
-//   }
-
-//   .sarq__text {
-//     top: 40px;
-//     left: 40px;
-//     width: 50%;
-//     position: absolute;
-
-//     h3 {
-//       font-size: 20px;
-//     }
-
-//     button {
-//       gap: 8px;
-//       width: 100px;
-//       height: 35px;
-//       font-size: 13px;
-//       border-radius: 6px;
-//     }
-//   }
-// }
-
-// sariq1
 
 @media (max-width: 784px) {
   .sarq__text {
@@ -772,6 +745,11 @@
 }
 
 @media (max-width: 440px) {
+  .loader {
+    display: grid;
+    grid-template-columns: 100% !important;
+    gap: 20px;
+  }
   .sarq__all {
     display: grid;
     grid-template-columns: 100%;

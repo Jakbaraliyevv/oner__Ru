@@ -128,10 +128,6 @@ function Avtomasala() {
           </div>
         </div>
       </div>
-
-      <div className="container">
-        {/* <div className="avtomasla">{cardProductLoader()}</div> */}
-      </div>
     </section>
   );
 }

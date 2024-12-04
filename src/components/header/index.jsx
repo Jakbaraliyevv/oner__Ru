@@ -23,15 +23,18 @@ function Header() {
     navigate("/korzina");
   };
 
+  const clickBUtton2 = () => {
+    navigate("/");
+  };
+
   const { state } = useContext(ShopAppContext);
-  console.log(state.data);
 
   return (
     <header className="header">
       <div className="header__top">
         <div className="container">
           <div className="headerLeft">
-            <img src={logo} alt="" />
+            <img onClick={clickBUtton2} src={logo} alt="" />
 
             <form className="form order2">
               <input
@@ -119,12 +122,12 @@ function Header() {
           <div className="nav__top">
             <div className="nav__logo">
               <FontAwesomeIcon icon={faBars} className="avisome__bars" />
-              <img src={logo} alt="" />
+              <img onClick={clickBUtton2} src={logo} alt="" />
             </div>
             <div className="location">
               <FontAwesomeIcon icon={faLocationDot} className="avisome__nav" />
               <div>
-                <Badge count={state.data.length}>
+                <Badge count={state.data.length} onClick={clickBUtton}>
                   <FontAwesomeIcon
                     icon={faCartShopping}
                     className="korzina__Shop"
